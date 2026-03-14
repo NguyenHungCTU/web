@@ -2,95 +2,139 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Thành viên lớp 12A - Version 2</title>
+    <title>Thành viên lớp 12A</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
-            color: #222;
-            height: 100vh;
+            background: #fff;
+            color: #000;
         }
-        header {
-            background: #0b3d91;
-            padding: 14px 24px;
+        .layout {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            min-height: 100vh;
         }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 16px;
-            font-weight: bold;
+        .sidebar {
+            width: 170px;
+            background: #cde7ff; /* xanh nước nhạt */
+            border-right: 1px solid #000;
+            padding: 16px 12px;
+            box-sizing: border-box;
+            
         }
-        main {
-            max-width: 980px;
-            margin: 24px auto;
-            padding: 0 16px;
+        .sidebar h2 {
+            font-size: 16px;
+            margin: 0 0 10px;
         }
-        h1 {
+        .sidebar a {
+            display: block;
+            padding: 6px 0;
+            text-decoration: underline;
+            color: #000;
+            margin-bottom: 4px;
+            border: 1px solid #000;
+        } 
+        .content {
+            flex: 1;
+            padding: 20px 24px;
+        }
+        .content h1 {
             margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 22px;
+            text-align: center;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-size: 14px;
         }
         th, td {
-            padding: 10px 12px;
-            border-bottom: 1px solid #ececec;
+            border: 1px solid #000;
+            padding: 6px 8px;
             text-align: left;
         }
         th {
-            background: #eaf0ff;
             font-weight: bold;
         }
-        tr:last-child td {
-            border-bottom: none;
+        tr.detail {
+            display: none;
+        }
+        button {
+            padding: 4px 8px;
+            border: 1px solid #000;
+            background: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #f0f0f0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div style="color:#fff;font-weight:bold;">Kỷ yếu lớp 12A</div>
-        <nav>
+    <div class="layout">
+        <div class="sidebar"> 
             <a href="index.html">Trang chủ</a>
-            <a href="thanhvienlop.html">Thành viên</a>
+            <a class="active" href="thanhvienlop.html">Thành viên lớp</a>
             <a href="hoatdong.html">Hoạt động</a>
-        </nav>
-    </header>
+        </div>
 
-    <main>
-        <h1>Danh sách thành viên</h1>
+        <div class="content">
+            <h1>Thành viên lớp 12A</h1>
 
-        <table>
-            <tr>
-                <th>STT</th>
-                <th>Họ tên</th>
-                <th>Ngày sinh</th>
-                <th>Chức vụ</th>
-                <th>Quê quán</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Nguyễn Minh Châu</td>
-                <td>19/11/2008</td>
-                <td>Lớp trưởng</td>
-                <td>Đà Loan</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Nguyễn Hoàng Minh Hậu</td>
-                <td>12/05/2008</td>
-                <td>Lớp phó</td>
-                <td>Đà Loan</td>
-            </tr>
-            <!-- Thêm dòng khác ở đây -->
-        </table>
-    </main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Chức vụ</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="row1">
+                        <td>1</td>
+                        <td>Nguyễn Minh Châu</td>
+                        <td>19/11/2008</td>
+                        <td>Lớp trưởng</td>
+                        <td><button type="button" onclick="toggleDetail('detail1')">Xem chi tiết</button></td>
+                    </tr>
+                    <tr id="detail1" class="detail">
+                        <td colspan="5">
+                            Quê quán: Hà Nội<br>
+                            Tính cách: Nhiệt tình, năng động<br>
+                            Hoạt động: Tổ chức họp mặt, điều phối hoạt động lớp
+                        </td>
+                    </tr>
+
+                    <tr id="row2">
+                        <td>2</td>
+                        <td>Nguyễn Hoàng Minh Hậu</td>
+                        <td>12/05/2008</td>
+                        <td>Lớp phó</td>
+                        <td><button type="button" onclick="toggleDetail('detail2')">Xem chi tiết</button></td>
+                    </tr>
+                    <tr id="detail2" class="detail">
+                        <td colspan="5">
+                            Quê quán: TP. Hồ Chí Minh<br>
+                            Tính cách: Cẩn thận, nhiệt tình<br>
+                            Hoạt động: Hỗ trợ tổ chức sự kiện, ghi biên bản
+                        </td>
+                    </tr>
+
+                    <!-- Thêm hàng giống mẫu ở trên -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetail(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.style.display = el.style.display === 'table-row' ? 'none' : 'table-row';
+        }
+    </script>
 </body>
 </html>
