@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kỷ yếu lớp 12A - Version 2</title>
+    <style>
+        body { 
+            margin: 0; /* loại bỏ khoảng cách mặc định của trình duyệt */
+            font-family: Arial, sans-serif; /* sử dụng font chữ dễ đọc */
+            color: #222; /* màu chữ tối để dễ đọc trên nền sáng */
+            background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+        
+        }
+        header {
+            background: #0b3d91; /* màu nền cho header */
+            padding: 14px 24px; /* khoảng cách bên trong header */
+            display: flex; /* sử dụng flexbox để căn chỉnh nội dung trong header */
+            justify-content: space-between; /* căn giữa nội dung trong header */    
+            align-items: center; /* căn giữa theo chiều dọc */
+        }
+        header a { /* kiểu dáng cho các liên kết trong header */
+            color: #fff; /* màu chữ trắng cho liên kết */
+            text-decoration: none; /* loại bỏ gạch chân */
+            margin-left: 16px; /* khoảng cách giữa các liên kết */
+            font-weight: bold; /* làm chữ đậm */
+        }
+        main { /* kiểu dáng cho phần nội dung chính */
+            max-width: 980px; /* giới hạn chiều rộng của nội dung */
+            margin: 24px auto; /* căn giữa nội dung và tạo khoảng cách trên dưới */
+            padding: 0 16px; /* khoảng cách bên trong phần nội dung */
+        }
+        .intro {
+            background: #fff; 
+            padding: 18px; /* tạo khoảng cách bên trong phần giới thiệu */
+            border-radius: 10px; /* tạo hiệu ứng nổi cho phần giới thiệu */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* tạo hiệu ứng nổi cho phần giới thiệu */
+        }
+        .intro h1 {
+            margin-top: 0; /* loại bỏ khoảng cách trên cùng của tiêu đề trong phần giới thiệu */
+        }
+        .cards {
+            margin-top: 18px; /* khoảng cách giữa phần giới thiệu và phần card */
+            display: flex; /* sử dụng flexbox để tạo layout dạng card */
+            gap: 10px; /* khoảng cách giữa các card */
+            flex-wrap: wrap; /* cho phép xuống dòng nếu không đủ chỗ */
+        }
+        .card {
+            flex: 1 1 220px; /* mỗi card chiếm ít nhất 220px và có thể mở rộng */
+            background: #fff; /* màu nền trắng cho card */
+            padding: 14px; /* tạo khoảng cách bên trong card */
+            border-radius: 10px; /* tạo hiệu ứng nổi cho card */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* tạo hiệu ứng nổi cho card */
+        }
+        .card img { /* kiểu dáng cho hình ảnh trong card */
+            width: 100%; /* hình ảnh chiếm toàn bộ chiều rộng của card */
+            border-radius: 8px; /* tạo hiệu ứng bo góc cho hình ảnh */
+        }
+        .card h3 { /* kiểu dáng cho tiêu đề trong card */
+            margin: 10px 0 6px; /* tạo khoảng cách trên và dưới cho tiêu đề trong card */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="color:#fff;font-weight:bold;">Kỷ yếu lớp 12A</div>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="thanhvienlop.html">Thành viên</a>
+            <a href="hoatdong.html">Hoạt động</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Chào mừng đến với lớp 12A</h1>
+            <p>Đây là nơi tổng hợp thông tin thành viên và các hoạt động của lớp. Bạn có thể chuyển sang trang "Thành viên" để xem danh sách, hoặc "Hoạt động" để xem những sự kiện đã tổ chức và sắp tới.</p>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Wgj1ZW92DWRcG513CSSEt0mm5VzvGr44pQ&s" alt="Hoạt động 1">
+                <h3>Hoạt động lớp</h3>
+                <p>Những hoạt động chính của lớp: giao lưu, tham quan, tiệc cuối khóa...</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZSy5npNd3L-IsBi864Zd9WfZStusb8YUSXg&s" alt="Thành viên">
+                <h3>Thành viên lớp</h3>
+                <p>Danh sách và thông tin ngắn về các thành viên trong lớp.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Kỷ niệm">
+                <h3>Kỷ niệm</h3>
+                <p>Những khoảnh khắc đáng nhớ trong năm học.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
