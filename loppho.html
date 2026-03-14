@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết: Lớp phó</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+        }
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 170px;
+            background: #cde7ff;
+            border-right: 1px solid #000;
+            padding: 16px 12px;
+            box-sizing: border-box;
+        }
+        .sidebar a {
+            display: block;
+            padding: 6px 0;
+            text-decoration: underline;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        .sidebar a.active {
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            padding: 20px 24px;
+        }
+        .content h1 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
+        .member {
+            border: 1px solid #000;
+            padding: 14px;
+            margin-bottom: 18px;
+        }
+        .member h2 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+        .member p {
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="sidebar">
+            <a href="index.html">Trang chủ</a>
+            <a href="thanhvienlop.html">Thành viên lớp</a>
+            <a href="hoatdong.html">Hoạt động</a>
+        </div>
+
+        <div class="content">
+            <h1>Chi tiết thành viên</h1>
+
+            <div class="member">
+                <h2>Nguyễn Hoàng Minh Hậu (Lớp phó)</h2>
+                <p><strong>Ngày sinh:</strong> 12/05/2008</p>
+                <p><strong>Quê quán:</strong> TP. Hồ Chí Minh</p>
+                <p><strong>Tính cách:</strong> Cẩn thận, nhiệt tình</p>
+                <p><strong>Hoạt động:</strong> Hỗ trợ tổ chức sự kiện, ghi biên bản</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

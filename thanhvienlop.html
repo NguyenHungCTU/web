@@ -16,11 +16,10 @@
         }
         .sidebar {
             width: 170px;
-            background: #cde7ff; /* xanh nước nhạt */
+            background: #cde7ff;
             border-right: 1px solid #000;
             padding: 16px 12px;
             box-sizing: border-box;
-            
         }
         .sidebar h2 {
             font-size: 16px;
@@ -32,11 +31,11 @@
             text-decoration: underline;
             color: #000;
             margin-bottom: 4px;
-            border: 1px solid #000;
-        } 
+            border: 1px solid #000; 
+        }
         .content {
             flex: 1;
-            padding: 20px 24px;
+            padding: 20px 24px; 
         }
         .content h1 {
             margin-top: 0;
@@ -57,25 +56,23 @@
         th {
             font-weight: bold;
         }
-        tr.detail {
-            display: none;
-        }
-        button {
+        a.btn {
+            display: inline-block;
             padding: 4px 8px;
             border: 1px solid #000;
-            background: #fff;
-            cursor: pointer;
+            text-decoration: none;
+            color: #000;
         }
-        button:hover {
+        a.btn:hover {
             background: #f0f0f0;
         }
     </style>
 </head>
 <body>
     <div class="layout">
-        <div class="sidebar"> 
+        <div class="sidebar">
             <a href="index.html">Trang chủ</a>
-            <a class="active" href="thanhvienlop.html">Thành viên lớp</a>
+            <a class="active" href="thanhvienlop.html"  style="background-color: aquamarine;">Thành viên lớp</a>
             <a href="hoatdong.html">Hoạt động</a>
         </div>
 
@@ -93,48 +90,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr id="row1">
+                    <tr>
                         <td>1</td>
                         <td>Nguyễn Minh Châu</td>
                         <td>19/11/2008</td>
                         <td>Lớp trưởng</td>
-                        <td><button type="button" onclick="toggleDetail('detail1')">Xem chi tiết</button></td>
+                        <td><a class="btn" href="loptruong.html">Xem chi tiết</a></td>
                     </tr>
-                    <tr id="detail1" class="detail">
-                        <td colspan="5">
-                            Quê quán: Hà Nội<br>
-                            Tính cách: Nhiệt tình, năng động<br>
-                            Hoạt động: Tổ chức họp mặt, điều phối hoạt động lớp
-                        </td>
-                    </tr>
-
-                    <tr id="row2">
+                    <tr>
                         <td>2</td>
                         <td>Nguyễn Hoàng Minh Hậu</td>
                         <td>12/05/2008</td>
                         <td>Lớp phó</td>
-                        <td><button type="button" onclick="toggleDetail('detail2')">Xem chi tiết</button></td>
-                    </tr>
-                    <tr id="detail2" class="detail">
-                        <td colspan="5">
-                            Quê quán: TP. Hồ Chí Minh<br>
-                            Tính cách: Cẩn thận, nhiệt tình<br>
-                            Hoạt động: Hỗ trợ tổ chức sự kiện, ghi biên bản
-                        </td>
+                        <td><a class="btn" href="loppho.html">Xem chi tiết</a></td>
                     </tr>
 
-                    <!-- Thêm hàng giống mẫu ở trên -->
+                    <!-- Thêm hàng khác tại đây -->
                 </tbody>
             </table>
         </div>
     </div>
-
-    <script>
-        function toggleDetail(id) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            el.style.display = el.style.display === 'table-row' ? 'none' : 'table-row';
-        }
-    </script>
 </body>
 </html>
